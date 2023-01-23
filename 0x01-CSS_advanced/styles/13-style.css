@@ -21,11 +21,11 @@ a:visited {
 }
 
 a:hover {
-    text-decoration-style: solid;
+    text-decoration: solid;
 }
 
 a:active {
-    color: var(--color-light-grey);
+    background-color: var(--color-light-grey);
 }
 
 .visually-hidden {
