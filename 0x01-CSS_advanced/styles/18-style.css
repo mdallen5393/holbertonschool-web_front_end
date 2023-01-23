@@ -114,7 +114,7 @@ a:active {
     --nav-item-font-family: var(--font-family-title);
     --nav-item-font-weight: var(--font-weight-bold);
     --nav-item-font-size: var(--font-size-medium);
-    --nav-item-letter-spacing: 104%;
+    --nav-item-letter-spacing: .04;
     --nav-item-display: inline-block;
     --nav-item-margin: 0 0 3 0;
     --nav-item-link-hover: var(--color-primary)
