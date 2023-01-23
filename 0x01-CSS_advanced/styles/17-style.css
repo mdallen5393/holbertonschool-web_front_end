@@ -57,7 +57,7 @@ a:active {
 }
 
 .section-footer {
-    padding: var(--section-body-footer);
+    padding: var(--section-footer-padding);
     text-align: var(--section-footer-align);
 }
 
@@ -107,7 +107,7 @@ a:active {
     --section-title-color: var(--color-black);
     --section-padding: 5rem 0;
     --section-header-padding: 0 0 3rem;
-    --section-body-footer: 0 0 3rem;
+    --section-body-padding: 0 0 3rem;
     --section-footer-padding: 3rem 0 0;
     --section-footer-align: center;
     --footer-padding: 5rem 0 1rem;
