@@ -151,7 +151,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav .nav-link {
     display: block;
-    padding: .5 1!important;
+    padding: .5 1;
 }
 
 .nav .nav-link:hover {
