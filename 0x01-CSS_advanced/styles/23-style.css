@@ -210,5 +210,5 @@ ul.row {
 }
 
 .social-link > svg {
-    background-color: var(--text-color);
+    background: var(--text-color);
 }
