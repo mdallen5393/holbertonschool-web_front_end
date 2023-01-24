@@ -96,7 +96,7 @@
 }
 
 .nav .nav-link::before {
-    content: empty;
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
