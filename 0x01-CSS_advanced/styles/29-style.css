@@ -102,7 +102,7 @@
     left: 0;
     background-color: var(--color-white);
     width: 0;
-    height: 20rem;
+    height: 0.2rem;
 }
 
 .nav .nav-link:hover::before {
