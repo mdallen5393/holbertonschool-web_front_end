@@ -104,8 +104,8 @@
   }
   
   html {
-  scroll-behavior: smooth;
-  font-size: 62.5%;
+    scroll-behavior: smooth;
+    font-size: 62.5%;
   }
   
   body {
@@ -305,41 +305,40 @@
   }
   /* Header
       ============================= */
-  
-  .header .menu-icon {
-    cursor: pointer;
-    padding: 2.5rem;
-    position: relative;
-    user-select: none;
-  }
+    .header .menu-icon {
+        cursor: pointer;
+        padding: 2.5rem;
+        position: relative;
+        user-select: none;
+    }
 
-  .header .menu-icon .navicon {
-    background: var(--color-white);
-    display: block;
-    width: 2rem;
-    height: .2rem;
-    position: relative;
-    transition: background .2s ease-out;
-  }
+    .header .menu-icon .navicon {
+        background: var(--color-white);
+        display: block;
+        width: 2rem;
+        height: .2rem;
+        position: relative;
+        transition: background .2s ease-out;
+    }
 
-  .header .menu-icon .navicon::before, .header .menu .navicon::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: var(--color-white);
-    transition: all .2s ease-out;
-  }
+    .header .menu-icon .navicon::before, .header .menu .navicon::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: var(--color-white);
+        transition: all .2s ease-out;
+    }
 
-  .header .menu-icon .navicon::before {
-    top: .7rem;
-  }
+    .header .menu-icon .navicon::before {
+        top: .7rem;
+    }
 
-  .header .menu-icon .navicon::after {
-    top: -.7rem;
-  }
-
+    .header .menu-icon .navicon::after {
+        top: -.7rem;
+    }
+    
   .header {
     padding: var(--header-padding);
     position: relative;
@@ -693,14 +692,14 @@
     color: var(--color-grey);
     text-align: center;
   }
-
+  
   /* Post Meta
       ============================= */
-
+  
   .post-meta-list {
     flex-direction: column;
   }
-
+  
   .post-meta-list strong {
     color: var(--color-primary);
     font-size: 1.3rem;
@@ -709,63 +708,63 @@
     letter-spacing: normal;
     display: block;
   }
-
+  
   .post-meta-list [class*='post-meta'] {
     margin-bottom: 1rem;
     padding-bottom: 1rem;
     border-bottom: 0.2rem solid var(--color-light-grey);
   }
-
+  
   .post-meta-list [class*='post-meta']:last-child {
     border: none;
     margin-bottom: 3rem;
   }
-
+  
   /* Tag list
       ============================= */
-
+  
   .tag-list {
     padding: 0;
     list-style: none;
   }
-
+  
   .tag-list li {
     display: inline;
   }
-
+  
   .tag-list li::after {
     content: ", ";
   }
-
+  
   .tag-list li:last-child::after {
     content: "";
   }
-
+  
   /*** FORM ***/
-
+  
   /* Comment section
       ============================= */
-
+  
   .post-comments {
     width: 80%;
     margin: 10rem 0 0 auto;
     padding-left: 7rem;
   }
-
+  
   .post-comments .section-title {
     font-variant: small-caps;
   }
-
+  
   /* Basic form
       ============================= */
-
+  
   form {
     display: flex;
     flex-direction: column;
     padding: 1rem 0;
     margin: 0;
   }
-
+  
   fieldset {
     border: 0;
     display: flex;
@@ -773,7 +772,7 @@
     justify-content: flex-start;
     padding: 0 0 2rem;
   }
-
+  
   label {
     cursor: pointer;
     display: block;
@@ -781,7 +780,7 @@
     font-size: 1.4rem;
     padding: 0 0 .5rem;
   }
-
+  
   input[type=text],
   input[type=email],
   textarea {
@@ -794,51 +793,51 @@
     box-shadow: none;
     outline: 0;
   }
-
+  
   input[type=text],
   input[type=email] {
     padding-right: 3rem;
   }
-
+  
   input[type=text]:focus,
   input[type=email]:focus,
   textarea:focus {
     border: .1rem solid var(--color-grey);
   }
-
+  
   ::placeholder {
     font-style: italic;
     font-size: var(--font-size-small);
   }
-
+  
   /* Form group
       ============================= */
-
+  
   .form-group {
     padding: 1rem;
     margin: 0;
     background-color: var(--color-white);
   }
-
+  
   .form-group:focus-within {
     background-color: var(--color-light-grey);
     transition: .3s;
   }
-
+  
   /* Form field
       ============================= */
-
+  
   .form-field-container {
     position: relative;
   }
-
+  
   .form-field-icon {
     font-style: normal;
   }
-
+  
   /* Form help
       ============================= */
-
+  
   .form-group .form-help {
     margin: 0;
     line-height: 1.3;
@@ -849,15 +848,15 @@
     transition: .3s;
     overflow: hidden;
   }
-
+  
   .form-group:focus-within .form-help {
     max-height: 20rem;
     margin: .4rem 0 0;
   }
-
+  
   /* Form error handling
       ============================= */
-
+  
   input:not(:placeholder-shown) ~ .form-field-icon::after {
     height: 100%;
     right: 0;
@@ -866,39 +865,39 @@
     top: 0;
     width: 1.3em;
   }
-
+  
   input:required:invalid:not(:focus):not(:placeholder-shown) ~ .form-field-icon::after {
     content: '✘';
     color: var(--error-color);
   }
-
+  
   input:required:valid ~ .form-field-icon::after {
     content: '✔';
     color: var(--valid-color);
   }
-
+  
   input:required:valid ~ .form-help {
     max-height: 0;
   }
-
+  
   input:required:invalid:not(:focus):not(:placeholder-shown),
   textarea:invalid:not(:focus):not(:placeholder-shown) {
     border: 0.1rem solid var(--error-color);
   }
-
+  
   input:required:valid:not(:placeholder-shown),
   textarea:valid:not(:placeholder-shown) {
     border: 0.1rem solid var(--valid-color);
   }
-
+  
   /*** SEARCH FORM ***/
-
+  
   .form-search {
     display: block;
     padding: .5rem 0;
     position: relative;
   }
-
+  
   .form-search .search-button {
     display: inline-block;
     background: transparent;
@@ -906,13 +905,13 @@
     margin: 0;
     padding: 0;
   }
-
+  
   .search-button .search-icon {
     fill: var(--color-white);
     width: 1.5rem;
     height: 1.5rem;
   }
-
+  
   .form-search input[type="search"] {
     display: inline-block;
     color: var(--color-white);
@@ -928,7 +927,7 @@
     z-index: 3;
     transition: width .4s cubic-bezier(0, 0.795, 0, 1);
   }
-
+  
   .form-search input[type="search"]:focus {
     position: relative;
     width: 15rem;
@@ -938,3 +937,4 @@
     cursor: text;
     margin: 0 1rem;
   }
+    
