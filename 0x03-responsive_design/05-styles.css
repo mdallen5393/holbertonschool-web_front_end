@@ -104,8 +104,8 @@
   }
   
   html {
-    scroll-behavior: smooth;
-    font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
   }
   
   body {
@@ -305,40 +305,40 @@
   }
   /* Header
       ============================= */
-    .header .menu-icon {
-        cursor: pointer;
-        padding: 2.5rem;
-        position: relative;
-        user-select: none;
-    }
+  .header .menu-icon {
+      cursor: pointer;
+      padding: 2.5rem;
+      position: relative;
+      user-select: none;
+  }
 
-    .header .menu-icon .navicon {
-        background: var(--color-white);
-        display: block;
-        width: 2rem;
-        height: .2rem;
-        position: relative;
-        transition: background .2s ease-out;
-    }
+  .header .menu-icon .navicon {
+      background: var(--color-white);
+      display: block;
+      width: 2rem;
+      height: .2rem;
+      position: relative;
+      transition: background .2s ease-out;
+  }
 
-    .header .menu-icon .navicon::before, .header .menu .navicon::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background: var(--color-white);
-        transition: all .2s ease-out;
-    }
+  .header .menu-icon .navicon::before, .header .menu .navicon::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: var(--color-white);
+      transition: all .2s ease-out;
+  }
 
-    .header .menu-icon .navicon::before {
-        top: .7rem;
-    }
+  .header .menu-icon .navicon::before {
+      top: .7rem;
+  }
 
-    .header .menu-icon .navicon::after {
-        top: -.7rem;
-    }
-    
+  .header .menu-icon .navicon::after {
+      top: -.7rem;
+  }
+
   .header {
     padding: var(--header-padding);
     position: relative;
