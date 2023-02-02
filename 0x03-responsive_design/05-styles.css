@@ -321,7 +321,7 @@
       transition: background .2s ease-out;
   }
 
-  .header .menu-icon .navicon::before, .header .menu .navicon::after {
+  .header .menu-icon .navicon::before, .header .menu-icon .navicon::after {
       content: "";
       display: block;
       width: 100%;
