@@ -1,0 +1,13 @@
+/* 8-mixin_margins */
+@mixin my_margin($size: 10px) {
+    margin-left: $size;
+    margin-right: $size;
+}
+
+body {
+    @include my_margin;
+}
+
+div {
+    @include my_margin($size: 15px);
+}
