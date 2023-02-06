@@ -1,0 +1,14 @@
+/* 9-extended_list */
+.info {
+    font-size: 12px;
+}
+
+.success {
+    color: #00FF00;
+    @extend .info;
+}
+
+.warning {
+    color: #FF0000;
+    @extend .info;
+}
