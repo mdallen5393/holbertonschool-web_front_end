@@ -1,6 +1,6 @@
 /* 12-loop_header.scss */
 @for $i from 1 through 5 {
-    H#{$i} {
+    h#{$i} {
         font-size: #{$i}px;
     }
 }
