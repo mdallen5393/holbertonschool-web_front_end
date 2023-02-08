@@ -580,7 +580,7 @@
     flex-direction: column;
   }
 
-  .post-meta-list .strong {
+  .post-meta-list strong {
     color: var(--color-primary);
     font-size: font-size-small;
     text-transform: uppercase;
