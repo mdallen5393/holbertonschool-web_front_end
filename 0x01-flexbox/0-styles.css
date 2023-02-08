@@ -180,28 +180,24 @@
   
   /* Grid
       ============================= */
-  
+  row {
+    display: flex;
+  }
+
   ul.row {
     margin: 0;
     padding: 0;
     list-style: none;
   }
-  
-  .row::after {
-    content: '';
-    display: table;
-    clear: both;
-  }
-  
+
   [class*='col-'] {
-    float: left;
     padding: 0.5rem;
   }
-  
+
   .col-1-3 {
     width: 33.33%;
   }
-  
+
   .col-1-2 {
     width: 50%;
   }
