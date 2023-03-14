@@ -2,17 +2,16 @@ function countPrimeNumbers () {
   let count = 0;
   for (let i = 2; i < 100; i++) {
     if (isPrime(i))
-    count++;
+      count++;
   }
   return;
 }
 
 function isPrime (num) {
-  if (num % 1) return false;
   const sqr = Math.sqrt(num);
   
   for (let i = 2; i < sqr; i++)
-  if (sqr % i == 0) return false;
+    if (num % i == 0) return false;
   
   return true;
 }
