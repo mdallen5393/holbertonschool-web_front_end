@@ -4,7 +4,7 @@ function countPrimeNumbers () {
     if (isPrime(i))
       count++;
   }
-  return;
+  return count;
 }
 
 function isPrime (num) {
