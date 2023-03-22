@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+
+    <meta charset="utf-8" />
+    <title>Task 2</title>
+  </head>
+
+  <body>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+    <script type="application/javascript">
+      $(document).ready(function() {
+        function createFamilyTree() {
+          let table = $("<table>");
+          let headerRow = $("<tr>");
+          let col1 = $("<th>").text("Firstname");
+          let col2 = $("<th>").text("Lastname");
+          let row1 = $("<tr>");
+          let row2 = $("<tr>");
+          let row3 = $("<tr>");
+          let f1 = $("<td>").text("Guillaume");
+          let f2 = $("<td>").text("Paulette");
+          let f3 = $("<td>").text("Antoine");
+          let l1 = $("<td>").text("Salva");
+          let l2 = $("<td>").text("Salva");
+          let l3 = $("<td>").text("Salva");
+
+          // The .add() method creates does not modify the original object;
+          // Rather, it creates a new object that includes the original object
+          // and the new elements added.  Thus, you must assign the result of
+          // the add()s to a variable to save the changes.
+          headerRow = headerRow.add(col1).add(col2);
+
+          row1 = row1.add(f1).add(l1);
+          row2 = row2.add(f2).add(l2);
+          row3 = row3.add(f3).add(l3);
+
+          table = table.add(headerRow).add(row1).add(row2).add(row3);
+
+          $("body").append(table);
+        }
+
+        createFamilyTree();
+      });
+    </script>
+  </body>
+
+</html>
