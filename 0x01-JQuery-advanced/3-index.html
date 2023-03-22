@@ -11,28 +11,34 @@
     <script type="application/javascript">
       $(document).ready(function() {
         function createFamilyTree() {
-          // To append multiple elements at the same level within an element,
-          // separate them using a comma `,`.
           $("body").append(
             $("<table>").append(
-              $("<tr>").append(
-                $("<th>").text("Firstname"),
-                $("<th>").text("Lastname")
+              $("<thead>").append(
+                $("<tr>").append(
+                  $("<th>").text("Firstname"),
+                  $("<th>").text("Lastname")
+                )
               ),
-              $("<tr>").append(
-                $("<td>").text("Guillaume"),
-                $("<td>").text("Salva")
-              ),
-              $("<tr>").append(
-                $("<td>").text("Paulette"),
-                $("<td>").text("Salva")
-              ),
-              $("<tr>").append(
-                $("<td>").text("Antoine"),
-                $("<td>").text("Salva")
+              $("<tbody>").append(
+                $("<tr>").append(
+                  $("<td>").text("Guillaume"),
+                  $("<td>").text("Salva")
+                ),
+                $("<tr>").append(
+                  $("<td>").text("Paulette"),
+                  $("<td>").text("Salva")
+                ),
+                $("<tr>").append(
+                  $("<td>").text("Antoine"),
+                  $("<td>").text("Salva")
+                )
               )
             )
           );
+        }
+
+        function replaceFamilyTree () {
+
         }
 
         createFamilyTree();
