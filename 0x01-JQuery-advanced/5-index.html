@@ -28,10 +28,12 @@
           let newMember = $("<tr>").append(
             $("<td>").text(firstName),
             $("<td>").text(lastName),
-            $("<td>").text("(x)")
+            $("<td>").text("(x)").css("background-color", "orange").click(function() {
+              newMember.remove();
+            })
           );
 
-          $("<tbody>").html(newMember);
+          $("tbody").append(newMember);
         }
 
         createFamilyTree();
