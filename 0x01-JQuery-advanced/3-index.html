@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Task 3</title>
+  </head>
+
+  <body>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+    <script type="application/javascript">
+      $(document).ready(function() {
+        function createFamilyTree() {
+          // To append multiple elements at the same level within an element,
+          // separate them using a comma `,`.
+          $("body").append(
+            $("<table>").append(
+              $("<tr>").append(
+                $("<th>").text("Firstname"),
+                $("<th>").text("Lastname")
+              ),
+              $("<tr>").append(
+                $("<td>").text("Guillaume"),
+                $("<td>").text("Salva")
+              ),
+              $("<tr>").append(
+                $("<td>").text("Paulette"),
+                $("<td>").text("Salva")
+              ),
+              $("<tr>").append(
+                $("<td>").text("Antoine"),
+                $("<td>").text("Salva")
+              )
+            )
+          );
+        }
+
+        createFamilyTree();
+      });
+    </script>
+  </body>
+
+</html>
