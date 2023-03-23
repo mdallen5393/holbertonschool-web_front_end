@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Task 7</title>
+  </head>
+
+  <body>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script type="application/javascript">
+      $(document).ready(function() {
+        function createSearchForm() {
+          const submit = $("<input>").attr("type", "submit").click(function() {
+            // let input = ;
+            console.log($("input[type=text]").val());
+            queryWikipedia($("input[type=text]").val());
+          });
+
+          const input = $("<input>").attr("type", "text");
+          $("body").append(input);
+          $("body").append(submit);
+          $("body").append("<ul>");
+        }
+
+        function addNewArticle(id, title, snippet) {
+          // let newItem = $("<li>").append(
+          //   $("<p>").append(
+          //     $("<span>").text(`${id} - `),
+          //     $("<b>").text(title)
+          //   ),
+          //   $("<p>").text(snippet)
+          // ); TODO: fix this??  Why doesn't it work?
+
+          let newItem =`
+            <li>
+              <p><span>${id} - </span><b>${title}</b></p>
+              <p>${snippet}</p>
+            </li>
+          `;
+
+          $("ul").append(newItem);
+        }
+
+        function queryWikipedia(search) {
+          console.log('querying...');
+          $.ajax({
+            type: 'GET',
+            url: `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${search}&format=json`,
+            dataType: 'jsonp',
+            success: function(data) {
+              console.log(data);
+              for (let i = 0; i < data.query.search.length; i++) {
+                addNewArticle(data.query.search[i].pageid, data.query.search[i].title, data.query.search[i].snippet);
+              }
+            }
+          });
+        }
+
+        createSearchForm();
+      });
+    </script>
+  </body>
+
+</html>
+
