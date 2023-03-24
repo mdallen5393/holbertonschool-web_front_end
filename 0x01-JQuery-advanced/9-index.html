@@ -50,12 +50,12 @@
             url: `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${search}&format=json&sroffset=${offset}`,
             dataType: 'jsonp',
             success: function(data) {
+              $("ul").first().empty();
               for (let item of data.query.search) {
                 addNewArticle(item.pageid, item.title, item.snippet);
               }
               buildPagination(data.query.searchinfo.totalhits, 10, offset);
               displayLoading(0);
-              $("ul").first().empty();
             }
           });
         }
