@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 2</title>
+</head>
+<body>
+  <h1>Login to the website</h1>
+  <input type="text" id="firstname" />
+  <input type="text" id="email" />
+  <button onclick="setCookies()">Log me in</button>
+
+  <h1>Cookies</h1>
+  <button onclick="showCookies()">Show the cookies</button>
+
+  <script>
+  function setCookies() {
+    const d = new Date();
+    d.setTime(d.getTime() + (8 * 24 * 60 * 60 * 1000)); //8 day expiration
+    const expires = `expires=${d.toUTCString()}`;
+    document.cookie = `firstname=${document.querySelector('#firstname').value}; ${expires}`;
+    document.cookie = `email=${document.querySelector('#email').value}; ${expires}`;
+  }
+
+    function showCookies() {
+      const p = document.createElement('p');
+      const email = getCookie('email');
+      const firstname = getCookie('firstname');
+      p.innerHTML = `Email: ${email} - Firstname: ${firstname}`;
+      document.body.appendChild(p);
+    }
+
+    function getCookie(name) {
+      let find = name;
+      let decodedCookie = decodeURIComponent(document.cookie);
+      let ca = decodedCookie.split(';');
+      for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(find) == 0) {
+          return c.substring(find.length + 1, c.length);
+        }
+      }
+      return '';
+    }
+  </script>
+</body>
+</html>
