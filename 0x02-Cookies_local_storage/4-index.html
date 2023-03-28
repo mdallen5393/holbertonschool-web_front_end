@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 4</title>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+</head>
+<body>
+  <div id='form-container' style='display: none;'>
+    <h2>Login to the website</h2>
+    <input type="text" id="firstname" placeholder="First Name"/>
+    <input type="text" id="email" placeholder="Email"/>
+    <button onclick="setCookiesAndShowWelcomeMessage()">Log me in</button>
+  </div>
+
+  <script>
+    function showForm() {
+      const welcomeMessage = document.querySelector('h1');
+      if (welcomeMessage) {
+        welcomeMessage.remove();
+      }
+      document.querySelector('#form-container').style.display = 'block';
+    }
+
+    function hideForm() {
+      document.querySelector('div').style.display = 'none';
+    }
+
+    function deleteCookiesAndShowForm() {
+      Cookies.remove('firstname');
+      Cookies.remove('email');
+      showForm();
+    }
+
+    function showWelcomeMessageOrForm() {
+      const firstname = Cookies.get('firstname');
+      if (!firstname) {
+        showForm();
+      } else {
+        const h1 = document.createElement('h1');
+        h1.id = 'welcome-message';
+        h1.innerHTML = `Welcome ${firstname}`;
+        const logoutLink = document.createElement('span');
+        logoutLink.innerHTML = '(logout)';
+        logoutLink.style.cursor = 'pointer';
+        logoutLink.style.fontWeight = 'normal';
+        logoutLink.style.fontStyle = 'italic';
+        logoutLink.style.marginLeft = '10px';
+        // The following line is not calling deleteCookiesAndShowForm, rather
+        // setting it as an event handler.  This is why we do not use '()'.
+        logoutLink.onclick = deleteCookiesAndShowForm;
+        h1.appendChild(logoutLink);
+        document.body.appendChild(h1);
+      }
+    }
+
+    function setCookiesAndShowWelcomeMessage() {
+      const firstname = document.querySelector('#firstname').value;
+      const email = document.querySelector('#email').value;
+      Cookies.set('firstname', firstname, { expires: 8 });
+      Cookies.set('email', email, { expires: 8 });
+      hideForm();
+      showWelcomeMessageOrForm();
+    }
+
+    showWelcomeMessageOrForm();
+  </script>
+</body>
+</html>
