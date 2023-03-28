@@ -75,9 +75,9 @@
         const h1 = document.createElement('h1');
         h1.id = 'welcome-message';
         h1.innerHTML = `Welcome ${firstname}`;
-        const logoutLink = document.createElement('a');
-        logoutLink.href = '#';
+        const logoutLink = document.createElement('span');
         logoutLink.innerHTML = '(logout)';
+        logoutLink.style.cursor = 'pointer';
         logoutLink.style.fontWeight = 'normal';
         logoutLink.style.fontStyle = 'italic';
         logoutLink.style.marginLeft = '10px';
